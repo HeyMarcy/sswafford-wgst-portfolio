@@ -1,5 +1,8 @@
-All journals authored by [Sydney Swafford](https://www.linkedin.com/in/sydney-swafford-58092b107) during her [WGST Undergraduate Minor at UNC Charlotte](http://womensandgenderstudies.uncc.edu/undergraduate-minor).
 
-<img src="https://media.licdn.com/media/AAEAAQAAAAAAAAZ7AAAAJDY5ZjI2MTNkLTQ3NTUtNDZjZS1hYTNjLTgyYzMwOTAxNTQzYg.jpg" width="150"/>
+Journals written by **Sydney Swafford**
 
-*Sources are credited at the bottom of each journal.*
+[LinkedIn](https://www.linkedin.com/in/sydney-swafford-58092b107)
+
+[Twitter](https://twitter.com/Sydneson107)
+
+<a href="#"><img  width="150" src="https://media.licdn.com/media/AAEAAQAAAAAAAAZ7AAAAJDY5ZjI2MTNkLTQ3NTUtNDZjZS1hYTNjLTgyYzMwOTAxNTQzYg.jpg"/></a>
