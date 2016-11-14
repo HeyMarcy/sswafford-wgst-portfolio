@@ -4,7 +4,7 @@ import Journal from './Journal';
 class App extends Component {
   render = () =>
     <div>
-      <Journal src="/journals/Journal 2.docx"/>
+      <Journal entry={10}/>
     </div>
 }
 
