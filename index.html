@@ -1,6 +1,9 @@
 <div id="test" style="background: white">
   hi
 </div>
+<button onClick="fullscreen();">Fullscreen<button>
 <script>
-  document.getElementById('test').webkitRequestFullscreen();
+  function fullscreen() {
+    document.getElementById('test').webkitRequestFullscreen();
+  }
 </script>
