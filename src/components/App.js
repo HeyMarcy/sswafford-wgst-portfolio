@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Journal from './Journal';
+import Menu from './Menu';
 
 class App extends Component {
   render = () =>
     <div>
-      <Journal entry={2}/>
+      <Menu/>
     </div>
 }
 

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import styles from './Journal.css';
-
-import Document from './Document';
+import Document from '../Document/Document';
 
 class Journal extends Component {
   render = () =>
