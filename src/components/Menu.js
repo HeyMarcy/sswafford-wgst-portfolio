@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import MenuEntry from './MenuEntry';
+import {connect} from 'react-redux';
 
 class Menu extends Component {
   styles = StyleSheet.create({
@@ -14,13 +15,12 @@ class Menu extends Component {
 
   render = () =>
     <div className={css(this.styles.menu)}>
-      <MenuEntry i={0} n={6} entry={1}/>
-      <MenuEntry i={1} n={6} entry={2}/>
-      <MenuEntry i={2} n={6} entry={4}/>
-      <MenuEntry i={3} n={6} entry={1}/>
-      <MenuEntry i={4} n={6} entry={2}/>
-      <MenuEntry i={5} n={6} entry={4}/>
+      {
+        this.props.entries.map((entry, i) => (
+          <MenuEntry key={i} i={i} n={this.props.entries.length} entry={entry}/>
+        ))
+      }
     </div>
 }
 
-export default Menu;
+export default connect(({ entries }) => ({ entries }))(Menu);

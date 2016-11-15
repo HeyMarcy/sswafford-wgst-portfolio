@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import Menu from './Menu';
+import {Provider} from 'react-redux';
 
 class App extends Component {
   render = () =>
-    <div>
+    <Provider store={this.props.store}>
       <Menu/>
-    </div>
+    </Provider>
 }
 
 export default App;

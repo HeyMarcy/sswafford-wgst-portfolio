@@ -20,6 +20,8 @@
     "axios": "^0.15.2",
     "mammoth": "^1.2.5",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0"
   }
 }
