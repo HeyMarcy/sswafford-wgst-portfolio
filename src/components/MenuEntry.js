@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 
 class MenuEntry extends Component {
+  state = {
+    selected: false
+  }
+
   entries = {
     1: {
       title: 'Journal One',
@@ -10,7 +14,7 @@ class MenuEntry extends Component {
     },
     2: {
       title: 'Another Long Journal',
-      image: 'http://unsplash.com/photos/ucdh5HMkRMg/download',
+      image: 'http://unsplash.com/photos/b2PEDKfnyfY/download',
       tint: '#e74c3c',
     },
     4: {
@@ -31,8 +35,10 @@ class MenuEntry extends Component {
         'position': 'absolute',
         'left': '0',
         'right': '0',
-        'top': `${this.props.i * height}%`,
-        'height': `${height}%`,
+        'top': this.state.selected ? '0%' : `${this.props.i * height - 1}%`,
+        'height': this.state.selected ? '100%' : `${height + 1}%`,
+        'z-index': this.state.selected ? '100' : '1',
+        'transition': '0.2s',
       },
       foreground: {
         'background-image': `url(${this.entry.image})`,
@@ -53,7 +59,6 @@ class MenuEntry extends Component {
         'justify-content': 'center',
         'background-color': 'rgba(255,255,255,0)',
         'cursor': 'pointer',
-        'transition': 'background-color 0.2s',
         ':hover': {
           'background-color': 'rgba(255,255,255,0.15)',
         }
@@ -61,8 +66,14 @@ class MenuEntry extends Component {
     });
   }
 
-  render = () => 
-    <div>
+  select = () => {
+    this.setState({
+      selected: !this.state.selected
+    });
+  }
+
+  render = () =>
+    <div onClick={this.select}>
       <div className={css(this.styles.position, this.styles.background)}/>
       <div className={css(this.styles.position, this.styles.foreground)}/>
       <div className={css(this.styles.position, this.styles.text)}>
