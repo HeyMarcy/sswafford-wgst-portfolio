@@ -49,11 +49,11 @@ class MenuEntry extends Component {
   }
 
   render = () =>
-    <div onClick={this.select}>
+    console.log('render') || <div onClick={this.select}>
       <div className={css(this.styles.position, this.styles.background)}/>
       <div className={css(this.styles.position, this.styles.foreground)}/>
       <div className={css(this.styles.position, this.styles.text)}>
-        {this.props.entry.open + ''}
+        {this.props.entry.title}
       </div>
     </div>
 }
