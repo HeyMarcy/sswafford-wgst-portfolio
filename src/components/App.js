@@ -4,7 +4,7 @@ import Journal from './Journal';
 class App extends Component {
   render = () =>
     <div>
-      <Journal entry={10}/>
+      <Journal entry={2}/>
     </div>
 }
 
