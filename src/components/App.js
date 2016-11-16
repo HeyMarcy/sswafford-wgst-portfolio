@@ -16,7 +16,7 @@ class App extends Component {
         'background': 'white',
         'z-index': '1000',
         'transition': '0.5s',
-        'box-shadow': '0 0 5px 2px rgba(0,0,0,0.5)',
+        'box-shadow': '0 0 5px 0 rgba(0,0,0,0.5)',
         'padding': '2em',
         'color': 'rgba(0,0,0,0.8)',
       }

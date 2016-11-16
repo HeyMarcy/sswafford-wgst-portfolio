@@ -20,6 +20,10 @@ class CloseButton extends Component {
         'display': 'flex',
         'align-items': 'center',
         'cursor': 'pointer',
+        'flex-wrap': 'nowrap',
+        ':hover': {
+          'opacity': '0.5',
+        }
       },
       icon: {
         'height': '1.25em',
@@ -34,11 +38,12 @@ class CloseButton extends Component {
   }
 
   render = () =>
-    <button
+    <a
       onClick={this.click}
       className={css(this.styles.button)}>
-        {'Back to Journals'}<img src={closeIcon} className={css(this.styles.icon)}/>
-    </button>
+        <span>{'Back to Journals'}</span>
+        <img src={closeIcon} className={css(this.styles.icon)}/>
+    </a>
 }
 
 export default connect()(CloseButton);
