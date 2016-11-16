@@ -2,23 +2,27 @@ import React, {Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import MenuEntry from './MenuEntry';
 import {connect} from 'react-redux';
+import CloseButton from './CloseButton';
 
 class Document extends Component {
-  styles = StyleSheet.create({
-    title: {
-      'font-family': 'Open Sans',
-      'font-size': '2em',
-      'font-weight': 'bold',
-      'text-align': 'center',
-    },
-    body: {
-      'line-height': '1.4em',
-      'font-size': '1.1em',
-    }
-  })
+  get styles() {
+    return StyleSheet.create({
+      title: {
+        'font-family': 'Open Sans',
+        'font-size': '2em',
+        'font-weight': 'bold',
+        'text-align': 'center',
+      },
+      body: {
+        'line-height': '1.5em',
+        'font-size': '1.25em',
+      }
+    });
+  }
 
   render = () =>
     <div>
+      <CloseButton/>
       <h1 className={css(this.styles.title)}>{this.props.title}</h1>
       <div className={css(this.styles.body)}>
         <p>

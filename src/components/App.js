@@ -9,15 +9,16 @@ class App extends Component {
     return StyleSheet.create({
       content: {
         'position': 'fixed',
-        'left': '1em',
-        'right': '1em',
+        'left': '2em',
+        'right': '2em',
         'top': this.props.menu.visible ? '105%' : '2em',
         'min-height': '100%',
         'background': 'white',
         'z-index': '1000',
         'transition': '0.5s',
         'box-shadow': '0 0 5px 2px rgba(0,0,0,0.5)',
-        'padding': '1.5em'
+        'padding': '2em',
+        'color': 'rgba(0,0,0,0.8)',
       }
     });
   }

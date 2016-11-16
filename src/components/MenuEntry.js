@@ -47,7 +47,7 @@ class MenuEntry extends Component {
   }
 
   render = () =>
-    console.log('render') || <div onClick={this.select}>
+    <div onClick={this.select}>
       <div className={css(this.styles.position, this.styles.background)}/>
       <div className={css(this.styles.position, this.styles.foreground)}/>
       <div className={css(this.styles.position, this.styles.text)}>
