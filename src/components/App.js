@@ -8,17 +8,17 @@ class App extends Component {
   get styles() {
     return StyleSheet.create({
       content: {
-        'position': 'fixed',
-        'left': '2em',
-        'right': '2em',
-        'top': this.props.menu.visible ? '105%' : '2em',
-        'min-height': '100%',
+        'position': 'relative',
         'background': 'white',
-        'z-index': '1000',
-        'transition': '0.5s',
-        'box-shadow': '0 0 5px 0 rgba(0,0,0,0.5)',
+        'box-shadow': '0 0 2px 0 rgba(0,0,0,0.5)',
         'padding': '2em',
         'color': 'rgba(0,0,0,0.8)',
+      },
+      contentShell: {
+        'transition': 'margin-top 0.5s',
+        'padding': '2em',
+        'margin-top': this.props.menu.visible ? '100vh' : '0em',
+        'z-index': '1000',
       }
     });
   }
@@ -26,11 +26,13 @@ class App extends Component {
   render = () =>
     <div>
       <Menu/>
-      <div className={css(this.styles.content)}>
-        {
-          this.props.entries.filter(entry => entry.open)
-            .map(entry => <Document key={entry.id} title={entry.title}/>)
-        }
+      <div className={css(this.styles.contentShell)}>
+        <div className={css(this.styles.content)}>
+          {
+            this.props.entries.filter(entry => entry.open)
+              .map(entry => <Document key={entry.id} title={entry.title}/>)
+          }
+        </div>
       </div>
     </div>
 }

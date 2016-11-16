@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 class Menu extends Component {
   styles = StyleSheet.create({
     menu: {
+      'position': 'fixed',
       'top': '0',
       'bottom': '0',
       'left': '0',
