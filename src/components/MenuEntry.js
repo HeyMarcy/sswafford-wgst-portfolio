@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import {connect} from 'react-redux';
+import select from '../actions/select';
 
 class MenuEntry extends Component {
   select = () => {
-    this.props.dispatch({
-      type: 'OPEN_ENTRY',
-      payload: this.props.entry.id
-    })
+    this.props.dispatch(select(this.props.entry.id));
   }
 
   get styles() {
@@ -20,7 +18,7 @@ class MenuEntry extends Component {
         'top': this.props.entry.open ? '0%' : `${this.props.i * height - 1}%`,
         'height': this.props.entry.open ? '100%' : `${height + 1}%`,
         'z-index': this.props.entry.open ? '100' : '1',
-        'transition': '0.2s',
+        'transition': 'background-color 0.2s, 0.5s',
       },
       foreground: {
         'background-image': `url(${this.props.entry.image})`,

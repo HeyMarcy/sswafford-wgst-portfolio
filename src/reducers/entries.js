@@ -15,42 +15,42 @@ export default function (state, action) {
       return state || [
         {
           id: 1,
-          title: 'TBD',
+          title: 'Cake Carrot Cake Sesame',
           image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
           tint: '#e74c3c',
           open: false
         },
         {
           id: 2,
-          title: 'TBD',
+          title: 'Dragée Toffee Gummi Bears',
           image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
           tint: '#2ecc71',
           open: false
         },
         {
           id: 4,
-          title: 'TBD',
+          title: 'Lemon Drops Tart Toffee',
           image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
           tint: '#e67e22',
           open: false
         },
         {
           id: 5,
-          title: 'TBD',
+          title: 'Wafer Fruitcake Macaroon Sesame Snaps',
           image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
           tint: '#8e44ad',
           open: false
         },
         {
           id: 6,
-          title: 'TBD',
+          title: 'Cotton Candy Tootsie Roll Pie',
           image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
           tint: '#f1c40f',
           open: false
         },
         {
           id: 10,
-          title: 'TBD',
+          title: 'Dessert Toffee Bear Claw Biscuit',
           image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
           tint: '#3498db',
           open: false
