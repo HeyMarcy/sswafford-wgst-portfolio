@@ -15,21 +15,42 @@ export default function (state, action) {
       return state || [
         {
           id: 1,
-          title: 'Journal One',
-          image: 'http://unsplash.com/photos/ndN00KmbJ1c/download',
-          tint: '#2ecc71',
-          open: false
-        },
-        {
-          id: 2,
-          title: 'Another Long Journal',
-          image: 'http://unsplash.com/photos/b2PEDKfnyfY/download',
+          title: 'TBD',
+          image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
           tint: '#e74c3c',
           open: false
         },
         {
+          id: 2,
+          title: 'TBD',
+          image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
+          tint: '#2ecc71',
+          open: false
+        },
+        {
           id: 4,
-          title: 'Example',
+          title: 'TBD',
+          image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
+          tint: '#e67e22',
+          open: false
+        },
+        {
+          id: 5,
+          title: 'TBD',
+          image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
+          tint: '#8e44ad',
+          open: false
+        },
+        {
+          id: 6,
+          title: 'TBD',
+          image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
+          tint: '#f1c40f',
+          open: false
+        },
+        {
+          id: 10,
+          title: 'TBD',
           image: 'http://unsplash.com/photos/VGOiY1gZZYg/download',
           tint: '#3498db',
           open: false
