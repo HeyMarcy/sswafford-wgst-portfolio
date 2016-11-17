@@ -31,7 +31,7 @@ class Loader extends Component {
         'background-size': 'contain',
         'background-position': 'center',
         'background-repeat': 'no-repeat',
-        'animation-name': spin,
+        'animationName': spin,
         'animation-duration': '0.75s',
         'animation-iteration-count': 'infinite',
         'animation-timing-function': 'linear',
