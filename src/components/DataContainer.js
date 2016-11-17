@@ -5,7 +5,7 @@ import mammoth from 'mammoth';
 
 class DataContainer extends Component {
   componentWillMount() {
-    this.props.entries.map((entry) => {
+    let loading = this.props.entries.map((entry) => {
       return axios.get(`journals/Journal ${entry.id}.docx`, {
         responseType: 'arraybuffer'
       })
@@ -25,6 +25,17 @@ class DataContainer extends Component {
         });
     });
 
+    loading.push(new Promise(resolve => {
+      const interval = setInterval(function() {
+        if (document.readyState === 'complete') {
+          resolve();
+          clearInterval(interval);
+        }
+      }, 250);
+    }));
+
+    Promise.all(loading)
+      .then(() => this.props.dispatch({ type: 'READY' }))
   }
 
   render() {

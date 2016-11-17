@@ -18,10 +18,3 @@ ReactDOM.render(
 );
 
 document.body.style.overflow = 'hidden';
-
-const interval = setInterval(function() {
-  if (document.readyState === 'complete') {
-    store.dispatch({ type: 'READY' });
-    clearInterval(interval);
-  }
-}, 250);
