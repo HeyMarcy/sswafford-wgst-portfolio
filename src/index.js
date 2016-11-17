@@ -16,3 +16,10 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+const interval = setInterval(function() {
+  if (document.readyState === 'complete') {
+    store.dispatch({ type: 'READY' });
+    clearInterval(interval);
+  }
+}, 250);
