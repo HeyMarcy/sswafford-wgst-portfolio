@@ -27,7 +27,7 @@ class Content extends Component {
       <div className={css(this.styles.content)}>
         {
           this.props.entries.filter(entry => entry.open)
-            .map(entry => <Document key={entry.id} title={entry.title} body={entry.body}/>)
+            .map(entry => <Document key={entry.id} {...entry}/>)
         }
       </div>
     </div>

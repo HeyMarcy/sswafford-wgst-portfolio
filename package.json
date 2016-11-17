@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "webpack-dev-server --devtool source-map",
-    "prebuild": "rm -rf dist && mkdir dist && cp index.html dist",
+    "prebuild": "rm -rf dist && mkdir dist && cp -r index.html journals dist",
     "build": "webpack -p --define process.env.NODE_ENV=\\'production\\'",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -18,13 +18,14 @@
     "gh-pages": "^0.12.0",
     "html-loader": "^0.4.4",
     "json-loader": "^0.5.4",
-    "markdown-loader": "^0.1.7",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "aphrodite": "^1.1.0",
+    "axios": "^0.15.2",
+    "mammoth": "^1.2.5",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.6",
     "react": "^15.3.2",

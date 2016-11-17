@@ -3,6 +3,7 @@ import {StyleSheet, css} from 'aphrodite';
 import MenuEntry from './MenuEntry';
 import {connect} from 'react-redux';
 import CloseButton from './CloseButton';
+import Journal from './Journal';
 
 class Document extends Component {
   get styles() {
@@ -24,9 +25,7 @@ class Document extends Component {
     <div>
       <CloseButton/>
       <h1 className={css(this.styles.title)}>{this.props.title}</h1>
-      <div
-        className={css(this.styles.body)}
-        dangerouslySetInnerHTML={{__html: this.props.body}}/>
+      <Journal className={css(this.styles.body)} entry={this.props.id}/>
     </div>
 }
 
