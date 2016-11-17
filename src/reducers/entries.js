@@ -11,6 +11,14 @@ export default function (state, action) {
         return { ...entry, open: false };
       });
     }
+    case 'LOAD_JOURNAL': {
+      return state.map(entry => {
+        if (action.payload.id === entry.id) {
+          return { ...entry , body: action.payload.content };
+        }
+        return { ...entry };
+      });
+    }
     default: {
       return state || [
         {
