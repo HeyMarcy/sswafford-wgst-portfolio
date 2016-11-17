@@ -6,6 +6,7 @@ export default function (id) {
     });
 
     setTimeout(() => {
+      document.body.style.overflow = 'visible';
       dispatch({
         type: 'HIDE_MENU'
       });

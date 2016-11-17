@@ -17,6 +17,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+document.body.style.overflow = 'hidden';
+
 const interval = setInterval(function() {
   if (document.readyState === 'complete') {
     store.dispatch({ type: 'READY' });
