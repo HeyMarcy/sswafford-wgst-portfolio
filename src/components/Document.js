@@ -25,7 +25,7 @@ class Document extends Component {
     <div>
       <CloseButton/>
       <h1 className={css(this.styles.title)}>{this.props.title}</h1>
-      <div className={css(this.styles.body)} dangerouslySetInnerHTML={{__html: this.props.body}}/>
+      <div className={css(this.styles.body) + ' content'} dangerouslySetInnerHTML={{__html: this.props.body}}/>
       <CloseButton bottom/>
     </div>
 }
