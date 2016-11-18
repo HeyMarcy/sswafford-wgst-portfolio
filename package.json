@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --devtool source-map",
+    "start": "webpack-dev-server --devtool source-map --host 0.0.0.0",
     "prebuild": "rm -rf dist && mkdir dist && cp -r index.html journals dist",
     "build": "webpack -p --define process.env.NODE_ENV=\\'production\\'",
     "predeploy": "npm run build",
@@ -27,11 +27,12 @@
   "dependencies": {
     "aphrodite": "^1.1.0",
     "axios": "^0.15.2",
+    "es6-promise": "^4.0.5",
     "mammoth": "^1.2.5",
+    "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.6",
-    "react": "^15.3.2",
-    "redux-thunk": "^2.1.0",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0"
   }
 }
