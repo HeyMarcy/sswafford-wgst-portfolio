@@ -23,7 +23,7 @@ export default function (state, action) {
       return state || [
         {
           id: 1,
-          title: 'No Title',
+          title: `I'm a feminist`,
           image: 'https://images.unsplash.com/uploads/14128324071271c853818/3765c625?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d73b6f1d71a80b88e047b5bb835653a0',
           tint: '#e74c3c',
         },
@@ -53,7 +53,7 @@ export default function (state, action) {
         },
         {
           id: 10,
-          title: 'No Title',
+          title: 'Beauty Cult',
           image: 'https://images.unsplash.com/uploads/14128324071271c853818/3765c625?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d73b6f1d71a80b88e047b5bb835653a0',
           tint: '#3498db',
         }
