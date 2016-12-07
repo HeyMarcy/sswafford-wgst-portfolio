@@ -15,16 +15,15 @@ class Content extends Component {
       },
       contentShell: {
         'transition': 'margin-top 0.5s',
-        'padding': '2em',
-        'margin-top': this.props.menu.visible ? '100vh' : '0em',
-        'z-index': '1000',
+        'padding': '2em 3em',
+        'margin-top': this.props.menu.visible ? '100vh' : '1px',
       }
     });
   }
 
   render = () =>
-    <div className={css(this.styles.contentShell)}>
-      <div className={css(this.styles.content)}>
+    <div className={css(this.styles.contentShell)} style={{zIndex:1000}}>
+      <div className={css(this.styles.content)} style={{zIndex:500}}>
         {
           this.props.entries.filter(entry => entry.open)
             .map(entry => <Document key={entry.id} {...entry}/>)

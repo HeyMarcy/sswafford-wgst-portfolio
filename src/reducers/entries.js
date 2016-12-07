@@ -23,39 +23,57 @@ export default function (state, action) {
       return state || [
         {
           id: 1,
-          title: 'No Title',
-          image: 'https://images.unsplash.com/uploads/14128324071271c853818/3765c625?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d73b6f1d71a80b88e047b5bb835653a0',
-          tint: '#e74c3c',
+          title: 'I am a Feminist',
+          image: require('../assets/backgrounds/nqsunxinsp4-alex-harvey.jpg'),
+          tint: '#000',
         },
         {
           id: 2,
           title: 'Feminist in History: Mary Daly',
-          image: 'https://images.unsplash.com/uploads/14128324071271c853818/3765c625?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d73b6f1d71a80b88e047b5bb835653a0',
-          tint: '#2ecc71',
+          image: require('../assets/backgrounds/urgyjacxvai-judson-moore.jpg'),
+          tint: '#000',
         },
         {
           id: 4,
           title: 'Contemporary Feminist',
-          image: 'https://images.unsplash.com/uploads/14128324071271c853818/3765c625?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d73b6f1d71a80b88e047b5bb835653a0',
-          tint: '#e67e22',
+          image: require('../assets/backgrounds/wjj3xp5z_vw-dorne-marting.jpg'),
+          tint: '#000',
         },
         {
           id: 5,
           title: 'Intro to Manifesta',
-          image: 'https://images.unsplash.com/uploads/14128324071271c853818/3765c625?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d73b6f1d71a80b88e047b5bb835653a0',
-          tint: '#8e44ad',
+          image: require('../assets/backgrounds/25joi4xc-du-roksolana-zasiadko.jpg'),
+          tint: '#000',
         },
         {
           id: 6,
           title: 'What Is Feminism?',
-          image: 'https://images.unsplash.com/uploads/14128324071271c853818/3765c625?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d73b6f1d71a80b88e047b5bb835653a0',
-          tint: '#f1c40f',
+          image: require('../assets/backgrounds/yxpivqyqcp0-alice-achterhof.jpg'),
+          tint: '#000',
+        },
+        {
+          id: 9,
+          title: 'Mentor Role',
+          image: require('../assets/backgrounds/2qs7wbere3c-sean-mcauliffe.jpg'),
+          tint: '#000',
         },
         {
           id: 10,
-          title: 'No Title',
-          image: 'https://images.unsplash.com/uploads/14128324071271c853818/3765c625?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d73b6f1d71a80b88e047b5bb835653a0',
-          tint: '#3498db',
+          title: 'Valenti Group Comments',
+          image: require('../assets/backgrounds/y32jfpfk0do-alisa-anton.jpg'),
+          tint: '#000',
+        },
+        {
+          id: 12,
+          title: 'Beauty Cult',
+          image: require('../assets/backgrounds/jx7ndtafbcu-steinar-la-engeland.jpg'),
+          tint: '#000',
+        },
+        {
+          id: 15,
+          title: 'Dove Workshop',
+          image: require('../assets/backgrounds/4wz1ysanfb0-annie-spratt.jpg'),
+          tint: '#000',
         }
       ];
     }

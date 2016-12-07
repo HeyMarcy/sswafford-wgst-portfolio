@@ -14,8 +14,9 @@ class Document extends Component {
         'text-align': 'center',
       },
       body: {
-        'line-height': '1.5em',
-        'font-size': '1.25em',
+        'font-family': 'Libre Baskerville',
+        'line-height': '2em',
+        'font-size': '1em',
       }
     });
   }
@@ -24,7 +25,8 @@ class Document extends Component {
     <div>
       <CloseButton/>
       <h1 className={css(this.styles.title)}>{this.props.title}</h1>
-      <div className={css(this.styles.body)} dangerouslySetInnerHTML={{__html: this.props.body}}/>
+      <div className={css(this.styles.body) + ' content'} dangerouslySetInnerHTML={{__html: this.props.body}}/>
+      <CloseButton bottom/>
     </div>
 }
 

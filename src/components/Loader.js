@@ -40,7 +40,7 @@ class Loader extends Component {
   }
 
   render = () =>
-    <div className={css(this.styles.main)}>
+    <div className={css(this.styles.main)} style={{zIndex:'-100'}}>
       <span className={css(this.styles.icon)}/>
     </div>
 }

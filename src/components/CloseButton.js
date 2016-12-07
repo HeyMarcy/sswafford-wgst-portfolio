@@ -9,7 +9,8 @@ class CloseButton extends Component {
     return StyleSheet.create({
       button: {
         'position': 'absolute',
-        'top': '1em',
+        'top': this.props.bottom ? 'default' : '1em',
+        'bottom': this.props.bottom ? '1em' : 'default',
         'right': '1em',
         'border': 'none',
         'background': 'none',
@@ -35,6 +36,7 @@ class CloseButton extends Component {
 
   click = () => {
     this.props.dispatch(close());
+    window.scrollTo(0, 0);
   }
 
   render = () =>
