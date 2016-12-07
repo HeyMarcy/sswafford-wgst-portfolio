@@ -24,14 +24,14 @@ class MenuEntry extends Component {
         'background-image': `url(${this.props.entry.image})`,
         'background-position': 'center',
         'background-size': 'cover',
-        'opacity': '0.8',
+        'opacity': '0.5',
       },
       background: {
         'background-color': this.props.entry.tint
       },
       text: {
         'font-family': 'Open Sans',
-        'font-size': '2.25em',
+        'font-size': '1.75em',
         'font-weight': 'bold',
         'color': 'white',
         'display': 'flex',

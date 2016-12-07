@@ -13,7 +13,15 @@ module.exports = {
       { test: /\.css$/,  loader: 'style-loader!css-loader?modules' },
       { test: /\.js$/,   loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.(jpe?g|png|gif|svg|pdf)$/i, loader: 'file?name=[path][name].[ext]?[hash]' }
+      { test: /\.(svg|pdf)$/i, loaders: [
+          'file?name=[path][name].[ext]?[hash]'
+        ]
+      },
+      { test: /\.(jpe?g|png|gif)$/i, loaders: [
+          'file?name=[path][name].[ext]?[hash]',
+          'resize?1600'
+        ]
+      }
     ]
   }
 }
