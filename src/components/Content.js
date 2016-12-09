@@ -12,10 +12,17 @@ class Content extends Component {
         'box-shadow': '0 0 2px 0 rgba(0,0,0,0.5)',
         'padding': '2em',
         'color': 'rgba(0,0,0,0.8)',
+        'width': '85%',
+        'max-width': '700px'
       },
       contentShell: {
         'transition': 'margin-top 0.5s',
-        'padding': '2em 3em',
+        'padding-top': '2em',
+        'padding-bottom': '2em',
+        'margin': 'auto',
+        'display': 'flex',
+        'align-items': 'center',
+        'justify-content': 'center',
         'margin-top': this.props.menu.visible ? '100vh' : '1px',
       }
     });
