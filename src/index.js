@@ -5,6 +5,7 @@ import App from './components/App';
 import reducers from './reducers';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
+import './helpers/iframeScrollLock';
 import 'es6-promise/auto';
 
 // enable redux devtools in development if available
