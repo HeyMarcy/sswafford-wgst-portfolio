@@ -21,13 +21,24 @@ class Document extends Component {
     });
   }
 
-  render = () =>
-    <div>
-      <CloseButton/>
-      <h1 className={css(this.styles.title)}>{this.props.title}</h1>
-      <div className={css(this.styles.body) + ' content'} dangerouslySetInnerHTML={{__html: this.props.body}}/>
-      <CloseButton bottom/>
-    </div>
+  render() {
+    let body = this.props.body;
+
+    // open all links in new tab
+    if (body) {
+      body = this.props.body
+        .replace(/<a href=/g, '<a target="_black" href=');
+    }
+
+    return (
+      <div>
+        <CloseButton/>
+        <h1 className={css(this.styles.title)}>{this.props.title}</h1>
+        <div className={css(this.styles.body) + ' content'} dangerouslySetInnerHTML={{__html: body}}/>
+        <CloseButton bottom/>
+      </div>
+    );
+  }
 }
 
 export default Document;
