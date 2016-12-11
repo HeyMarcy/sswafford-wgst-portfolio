@@ -82,8 +82,22 @@ export default function (state, action) {
         },
         {
           id: 100,
-          title: 'N/A',
-          image: require('../assets/backgrounds/4wz1ysanfb0-annie-spratt.jpg'),
+          title: 'This I Believe',
+          image: require('../assets/backgrounds/bo5bswjwgui-dana-critchlow.jpg'),
+          tint: '#000',
+          hidden: true
+        },
+        {
+          id: 101,
+          title: 'Outspoken Reflection',
+          image: require('../assets/backgrounds/ziceedwwh0o-andy-chilton.jpg'),
+          tint: '#000',
+          hidden: true
+        },
+        {
+          id: 102,
+          title: 'Reflection',
+          image: require('../assets/backgrounds/zwcuf5ptim4-annie-spratt.jpg'),
           tint: '#000',
           hidden: true
         }
