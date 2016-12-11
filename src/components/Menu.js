@@ -17,8 +17,8 @@ class Menu extends Component {
   render = () =>
     <div className={css(this.styles.menu)}>
       {
-        this.props.entries.map((entry, i) => (
-          <MenuEntry key={i} i={i} n={this.props.entries.length} entry={entry}/>
+        this.props.entries.filter(entry => !entry.hidden).map((entry, i, entries) => (
+          <MenuEntry key={i} i={i} n={entries.length} entry={entry}/>
         ))
       }
     </div>

@@ -6,6 +6,8 @@ import closeIcon from '../assets/icons/close.svg';
 
 class CloseButton extends Component {
   get styles() {
+    const numberOfHidden = this.props.entries.filter(entry => !entry.hidden).length;
+    const hideOnOneHidden = (numberOfHidden === 1);
     return StyleSheet.create({
       button: {
         'position': 'absolute',
@@ -18,7 +20,7 @@ class CloseButton extends Component {
         'font-weight': 'bold',
         'font-size': '1.1em',
         'color': 'inherit',
-        'display': 'flex',
+        'display': hideOnOneHidden ? 'none' : 'flex',
         'align-items': 'center',
         'cursor': 'pointer',
         'flex-wrap': 'nowrap',
@@ -48,4 +50,4 @@ class CloseButton extends Component {
     </a>
 }
 
-export default connect()(CloseButton);
+export default connect(stores => stores)(CloseButton);

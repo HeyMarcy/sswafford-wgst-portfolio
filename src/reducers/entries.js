@@ -2,7 +2,7 @@ export default function (state, action) {
   switch (action.type) {
     case 'OPEN_ENTRY': {
       return state.map(entry => {
-        const open = (action.payload === entry.id);
+        const open = (action.payload == entry.id);
         return { ...entry, open };
       });
     }
@@ -11,10 +11,15 @@ export default function (state, action) {
         return { ...entry, open: false };
       });
     }
+    case 'EXPOSE_ENTRY': {
+      return state.map(entry => {
+        return { ...entry, hidden: !(entry.id == action.payload) };
+      });
+    }
     case 'LOAD_JOURNAL': {
       return state.map(entry => {
         if (action.payload.id === entry.id) {
-          return { ...entry , body: action.payload.content };
+          return { ...entry, body: action.payload.content };
         }
         return { ...entry };
       });
@@ -74,6 +79,27 @@ export default function (state, action) {
           title: 'Dove Workshop',
           image: require('../assets/backgrounds/4wz1ysanfb0-annie-spratt.jpg'),
           tint: '#000',
+        },
+        {
+          id: 100,
+          title: 'This I Believe',
+          image: require('../assets/backgrounds/bo5bswjwgui-dana-critchlow.jpg'),
+          tint: '#000',
+          hidden: true
+        },
+        {
+          id: 101,
+          title: 'Outspoken Reflection',
+          image: require('../assets/backgrounds/ziceedwwh0o-andy-chilton.jpg'),
+          tint: '#000',
+          hidden: true
+        },
+        {
+          id: 102,
+          title: 'Reflection',
+          image: require('../assets/backgrounds/zwcuf5ptim4-annie-spratt.jpg'),
+          tint: '#000',
+          hidden: true
         }
       ];
     }

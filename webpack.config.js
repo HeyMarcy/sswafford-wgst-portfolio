@@ -17,9 +17,10 @@ module.exports = {
           'file?name=[path][name].[ext]?[hash]'
         ]
       },
-      { test: /\.(jpe?g|png|gif)$/i, loaders: [
+      {
+        test: /\.(jpe?g|png|gif)$/i, loaders: [
           'file?name=[path][name].[ext]?[hash]',
-          'resize?1600'
+          process.env.NODE_ENV === 'production' ? 'resize?1600' : 'null'
         ]
       }
     ]
